@@ -1,0 +1,31 @@
+{
+  "rules": {
+    "fooddash": {
+      "users": {
+        "$uid": {
+          ".read": "auth != null && (auth.uid === $uid || root.child('fooddash/users').child(auth.uid).child('role').val() === 'ADMIN')",
+          ".write": "auth != null && auth.uid === $uid && (!newData.child('role').exists() || newData.child('role').val() === 'CUSTOMER' || data.child('role').val() === 'ADMIN')"
+        }
+      },
+      "food": {
+        ".read": true,
+        ".write": "auth != null && root.child('fooddash/users').child(auth.uid).child('role').val() === 'ADMIN'"
+      },
+      "categories": {
+        ".read": true,
+        ".write": "auth != null && root.child('fooddash/users').child(auth.uid).child('role').val() === 'ADMIN'"
+      },
+      "orders": {
+        ".read": "auth != null",
+        ".indexOn": ["customerId", "status", "paymentStatus"],
+        "$orderId": {
+          ".write": "auth != null && (!data.exists() && newData.child('customerId').val() === auth.uid || root.child('fooddash/users').child(auth.uid).child('role').val() === 'ADMIN')"
+        }
+      },
+      "settings": {
+        ".read": true,
+        ".write": "auth != null && root.child('fooddash/users').child(auth.uid).child('role').val() === 'ADMIN'"
+      }
+    }
+  }
+}

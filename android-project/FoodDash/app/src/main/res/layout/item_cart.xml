@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivCartFood"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_fooddash_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCartFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textColor="@color/fooddash_text_main"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCartUnitPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BDT 380 each"
+                android:textColor="@color/fooddash_text_muted"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvCartLineTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BDT 760"
+                android:textColor="@color/fooddash_orange_primary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnCartMinus" android:layout_width="38dp" android:layout_height="38dp" android:text="-" />
+        <TextView android:id="@+id/tvCartQty" android:layout_width="32dp" android:layout_height="wrap_content" android:gravity="center" android:text="1" android:textStyle="bold" />
+        <Button android:id="@+id/btnCartPlus" android:layout_width="38dp" android:layout_height="38dp" android:text="+" />
+        <Button android:id="@+id/btnCartRemove" android:layout_width="wrap_content" android:layout_height="38dp" android:layout_marginStart="4dp" android:backgroundTint="@color/fooddash_danger" android:text="X" android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodDash</string>
+    <string name="app_tagline">Good Food. Easy Ordering. Fast Delivery.</string>
+    <string name="login_title">Welcome Back to FoodDash</string>
+    <string name="register_title">Create Customer Account</string>
+    <string name="admin_dashboard_title">FoodDash Restaurant Admin</string>
+    <string name="shake_hint">Tip: Shake your phone anytime to refresh live menu &amp; orders</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "FoodDash — Android Java + XML Project & Simulator",
+  "description": "Complete native Java + XML Android Studio food delivery application (com.fooddash.app) with Firebase Auth, Realtime Database, 14 Activities, 12 university lab features, interactive simulator, and full source export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fooddash_orange_primary">#F97316</color>
+    <color name="fooddash_orange_secondary">#EA580C</color>
+    <color name="fooddash_background">#FFF9F4</color>
+    <color name="fooddash_text_main">#1F2937</color>
+    <color name="fooddash_text_muted">#6B7280</color>
+    <color name="fooddash_success">#16A34A</color>
+    <color name="fooddash_warning">#D97706</color>
+    <color name="fooddash_danger">#DC2626</color>
+    <color name="fooddash_admin_bg">#17251F</color>
+    <color name="fooddash_admin_card">#21352C</color>
+    <color name="white">#FFFFFF</color>
+</resources>

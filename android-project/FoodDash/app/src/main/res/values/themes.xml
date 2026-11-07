@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FoodDash" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/fooddash_orange_primary</item>
+        <item name="colorPrimaryVariant">@color/fooddash_orange_secondary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/fooddash_orange_secondary</item>
+        <item name="android:windowBackground">@color/fooddash_background</item>
+        <item name="android:statusBarColor">@color/fooddash_orange_secondary</item>
+    </style>
+
+    <style name="Theme.FoodDash.NoActionBar" parent="Theme.FoodDash">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

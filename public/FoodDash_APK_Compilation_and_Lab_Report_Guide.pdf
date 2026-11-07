@@ -1,0 +1,877 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 6033 >>
+stream
+BT
+0.91 0.35 0.05 rg
+/F2 15 Tf
+1 0 0 1 48 738.0 Tm
+(FOODDASH - ANDROID STUDIO APK COMPILATION & LAB REPORT GUIDE) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 716.0 Tm
+(Course: Mobile Application and Development Lab \(0613-410\) | Package: com.fooddash.app) Tj
+0.35 0.35 0.35 rg
+/F1 9.5 Tf
+1 0 0 1 48 701.0 Tm
+(Stack: 100% Native Java + XML Layouts | Backend: Firebase Auth, Realtime DB & Storage) Tj
+0.91 0.35 0.05 rg
+/F2 12 Tf
+1 0 0 1 48 675.0 Tm
+(SECTION 1: FoodDash Android Studio Project Structure \(Java + XML\)) Tj
+0.15 0.25 0.20 rg
+/F2 9 Tf
+1 0 0 1 48 657.0 Tm
+(Package: com.fooddash.app | Target SDK: 34 | Minimum SDK: 24 | Language: Java 17) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 643.0 Tm
+(FoodDash is architected strictly as a native Android Studio project using Java for all) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 629.5 Tm
+(business logic and XML for all user interface layouts. No Kotlin application source code,) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 616.0 Tm
+(Jetpack Compose, or hybrid web frameworks are used in the Android source tree.) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 596.5 Tm
+(Before compiling the APK using either Method 1 \(Android Studio\) or Method 2 \(GitHub) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 583.0 Tm
+(Actions\), ensure your extracted FoodDash/ directory contains the following canonical) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 569.5 Tm
+(structure:) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 550.0 Tm
+(1.1 Root Gradle & Project Configuration Files) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 535.0 Tm
+(Located at the root of the extracted FoodDash/ folder. These files configure Gradle 8.7,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 522.0 Tm
+(the Android Gradle Plugin \(AGP 8.5.2\), Google Services plugin \(4.4.2\), and AndroidX) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 509.0 Tm
+(properties.) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 496.0 Tm
+(FoodDash/) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 484.5 Tm
+(|-- build.gradle.kts               # Root project plugins \(AGP 8.5.2, google-services 4.4.2\)) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 473.0 Tm
+(|-- settings.gradle.kts            # Configures Google & MavenCentral repos, includes :app) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 461.5 Tm
+(|-- gradle.properties              # Enables AndroidX & sets JVM heap \(-Xmx2048m\)) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 450.0 Tm
+(|-- database.rules.json            # Firebase Realtime Database security rules) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 438.5 Tm
+(|-- README.md                      # University submission documentation) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 427.0 Tm
+(|-- .github/workflows/build-apk.yml # Automated GitHub Actions Cloud APK Builder) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 408.5 Tm
+(1.2 Application Module \(app/\) & Java Packages) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 393.5 Tm
+(All 25 Java files are organized into 4 modular sub-packages under) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 380.5 Tm
+(app/src/main/java/com/fooddash/app/ alongside 17 XML layout files under) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 367.5 Tm
+(app/src/main/res/layout/.) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 354.5 Tm
+(FoodDash/app/) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 343.0 Tm
+(|-- build.gradle.kts               # Module config \(com.fooddash.app, Firebase BoM 33.5.1, Glide) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 331.5 Tm
+(|-- google-services.json           # Firebase configuration file \(starter template included\)) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 320.0 Tm
+(|-- src/main/) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 308.5 Tm
+(    |-- AndroidManifest.xml        # Declares 14 Activities, permissions, & launcher intent) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 297.0 Tm
+(    |-- java/com/fooddash/app/) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 285.5 Tm
+(    |   |-- activities/            # All 14 Screen Activities \(Splash, Login, CustomerHome, Admi) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 274.0 Tm
+(    |   |-- models/                # User.java, Food.java, Order.java, CartItem.java) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 262.5 Tm
+(    |   |-- adapters/              # FoodAdapter.java, CartAdapter.java, OrderAdapter.java) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 251.0 Tm
+(    |   |-- helpers/               # FirebaseHelper.java, SessionManager.java, ValidationHelper.) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 239.5 Tm
+(    |-- res/) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 228.0 Tm
+(        |-- layout/                # 14 Activity XML files + 3 RecyclerView item XML files) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 216.5 Tm
+(        |-- drawable/              # ic_fooddash_logo.xml custom vector icon) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 205.0 Tm
+(        |-- values/                # colors.xml, strings.xml, themes.xml) Tj
+0.91 0.35 0.05 rg
+/F2 12 Tf
+1 0 0 1 48 176.5 Tm
+(SECTION 2: Firebase Configuration & Security Rules Setup) Tj
+0.15 0.25 0.20 rg
+/F2 9 Tf
+1 0 0 1 48 158.5 Tm
+(Connecting Firebase Authentication, Realtime Database, and Storage to com.fooddash.app) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 144.5 Tm
+(The exported FoodDash project includes a valid starter app/google-services.json file so that) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 131.0 Tm
+(Gradle can compile a debug APK immediately without throwing a missing-file error. To connect) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 117.5 Tm
+(the compiled APK to your live Firebase cloud backend for your lab demonstration, follow) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 104.0 Tm
+(these steps:) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 84.5 Tm
+(Step 1: Create Project & Register Android Package) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 69.5 Tm
+(Open https://console.firebase.google.com/, click "Add project", and name it FoodDash.) Tj
+0.45 0.45 0.45 rg
+/F1 8.5 Tf
+1 0 0 1 48 32 Tm
+(FoodDash Lab Report & APK Compilation Guide (com.fooddash.app) - Page 1 of 5) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 5324 >>
+stream
+BT
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 738.0 Tm
+(Click the Android icon to register a new app using the exact package name) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 725.0 Tm
+(com.fooddash.app.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 705.0 Tm
+(Step 2: Replace app/google-services.json) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 690.0 Tm
+(Download the generated google-services.json file from Firebase Console and overwrite) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 677.0 Tm
+(FoodDash/app/google-services.json.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 657.0 Tm
+(Step 3: Enable Email/Password Authentication) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 642.0 Tm
+(In Firebase Console, navigate to Build -> Authentication -> Sign-in method, select) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 629.0 Tm
+(Email/Password, toggle Enable, and click Save.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 609.0 Tm
+(Step 4: Provision Realtime Database & Publish Security Rules) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 594.0 Tm
+(Navigate to Build -> Realtime Database -> Create Database. Open the Rules tab and paste) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 581.0 Tm
+(the contents of database.rules.json. This rule ensures customers cannot self-assign the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 568.0 Tm
+(ADMIN role.) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 555.0 Tm
+("users": {) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 543.5 Tm
+(  "$uid": {) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 532.0 Tm
+(    ".read": "auth != null && \(auth.uid === $uid || root.child\('fooddash/users'\).child\(auth.uid\)) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 520.5 Tm
+(    ".write": "auth != null && auth.uid === $uid && \(!newData.child\('role'\).exists\(\) || newData.) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 509.0 Tm
+(  }) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 497.5 Tm
+(}) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 479.0 Tm
+(Step 5: Provision Restaurant Admin Account) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 464.0 Tm
+(Register a normal user account in the app, then open Firebase Realtime Database console at) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 451.0 Tm
+(fooddash/users/{uid}/role and change the value from "CUSTOMER" to "ADMIN". When that user) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 438.0 Tm
+(logs in on LoginActivity, FoodDash automatically routes them to AdminDashboardActivity.) Tj
+0.91 0.35 0.05 rg
+/F2 12 Tf
+1 0 0 1 48 408.0 Tm
+(SECTION 3: Method 1: Manual APK Compilation in Android Studio) Tj
+0.15 0.25 0.20 rg
+/F2 9 Tf
+1 0 0 1 48 390.0 Tm
+(Standard Lab Procedure for Compiling, Debugging, and Installing app-debug.apk on a Local PC) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 376.0 Tm
+(Use Method 1 when working on your personal laptop or university lab PC with Android Studio) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 362.5 Tm
+(installed. This workflow compiles the Java 17 source code and XML resources into an) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 349.0 Tm
+(installable Android Package \(.apk\).) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 329.5 Tm
+(Step 1: Export & Extract the FoodDash Project Archive) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 314.5 Tm
+(Click "Export Android Project" in the FoodDash web workspace to download) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 301.5 Tm
+(FoodDash-AndroidStudio-Java-XML.tar. Extract the archive using WinRAR, 7-Zip, macOS) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 288.5 Tm
+(Archive Utility, or terminal:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 275.5 Tm
+(tar -xvf FoodDash-AndroidStudio-Java-XML.tar) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 257.0 Tm
+(Step 2: Open Project in Android Studio & Configure JDK 17) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 242.0 Tm
+(Launch Android Studio \(Koala / Ladybug or newer\), select File -> Open, and choose the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 229.0 Tm
+(extracted FoodDash/ directory. Verify that File -> Settings -> Build, Execution,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 216.0 Tm
+(Deployment -> Build Tools -> Gradle -> Gradle JDK is set to JDK 17 \(jbr-17\).) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 196.0 Tm
+(Step 3: Run Gradle Sync) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 181.0 Tm
+(Click "Sync Project with Gradle Files" \(the elephant icon in the top toolbar\). Gradle will) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 168.0 Tm
+(download AndroidX AppCompat, Material Components 1.12.0, ConstraintLayout, RecyclerView,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 155.0 Tm
+(CardView, Firebase BoM 33.5.1, Glide 4.16.0, and Gson 2.11.0.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 135.0 Tm
+(Step 4: Trigger Build APK\(s\) from the Menu or Terminal) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 120.0 Tm
+(In the Android Studio top menu bar, select Build -> Build Bundle\(s\) / APK\(s\) -> Build) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 107.0 Tm
+(APK\(s\). Alternatively, run the Gradle assembleDebug task in the Android Studio Terminal:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 94.0 Tm
+(./gradlew assembleDebug    # On macOS / Linux) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 82.5 Tm
+(gradlew.bat assembleDebug  # On Windows) Tj
+0.45 0.45 0.45 rg
+/F1 8.5 Tf
+1 0 0 1 48 32 Tm
+(FoodDash Lab Report & APK Compilation Guide (com.fooddash.app) - Page 2 of 5) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 5284 >>
+stream
+BT
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 738.0 Tm
+(Step 5: Locate & Install the Generated APK on Your Phone) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 723.0 Tm
+(Once the build finishes \("BUILD SUCCESSFUL"\), click "locate" in the bottom-right) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 710.0 Tm
+(notification balloon or navigate to the output path below. Enable "Install unknown apps") Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 697.0 Tm
+(on your Android phone and tap the APK to install, or install directly via USB Debugging:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 684.0 Tm
+(# Output APK Location:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 672.5 Tm
+(FoodDash/app/build/outputs/apk/debug/app-debug.apk) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 649.5 Tm
+(# Optional Direct USB Installation via ADB:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 638.0 Tm
+(adb install -r app/build/outputs/apk/debug/app-debug.apk) Tj
+0.91 0.35 0.05 rg
+/F2 12 Tf
+1 0 0 1 48 609.5 Tm
+(SECTION 4: Method 2: Automated Cloud APK Build via GitHub Actions) Tj
+0.15 0.25 0.20 rg
+/F2 9 Tf
+1 0 0 1 48 591.5 Tm
+(Zero-Local-Setup Compilation Using .github/workflows/build-apk.yml & GitHub Release v1.0) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 577.5 Tm
+(If your personal computer has limited RAM or trouble running Android Studio locally, Method) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 564.0 Tm
+(2 compiles the exact same Java + XML project on GitHub's cloud servers \(ubuntu-latest\)) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 550.5 Tm
+(automatically whenever you push code to your repository.) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 531.0 Tm
+(This method also directly fulfills Section 3 of the Final Lab Project instructions:) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 517.5 Tm
+(maintaining a public GitHub repository with regular commits and attaching the compiled APK) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 504.0 Tm
+(to GitHub Release v1.0.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 484.5 Tm
+(Step 1: Initialize Git & Push FoodDash to a Public GitHub Repository) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 469.5 Tm
+(Create a new public repository named FoodDash-Android on GitHub. Open a terminal inside) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 456.5 Tm
+(the extracted FoodDash/ directory and push all 55 project files:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 443.5 Tm
+(cd FoodDash) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 432.0 Tm
+(git init) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 420.5 Tm
+(git add .) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 409.0 Tm
+(git commit -m "Feat: Complete FoodDash Java + XML Android Studio project with 14 Activities") Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 397.5 Tm
+(git branch -M main) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 386.0 Tm
+(git remote add origin https://github.com/<your-username>/FoodDash-Android.git) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 374.5 Tm
+(git push -u origin main) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 356.0 Tm
+(Step 2: Understand the Included .github/workflows/build-apk.yml Pipeline) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 341.0 Tm
+(The exported project includes .github/workflows/build-apk.yml. As soon as git push) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 328.0 Tm
+(completes, GitHub Actions provisions an Ubuntu runner, installs Eclipse Temurin JDK 17,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 315.0 Tm
+(configures Gradle 8.7, executes gradle assembleDebug, and uploads the compiled APK as a) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 302.0 Tm
+(downloadable artifact:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 289.0 Tm
+(name: Build FoodDash Android APK) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 277.5 Tm
+(on:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 266.0 Tm
+(  push:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 254.5 Tm
+(    branches: [ "main", "master" ]) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 243.0 Tm
+(  workflow_dispatch:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 231.5 Tm
+(jobs:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 220.0 Tm
+(  build-apk:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 208.5 Tm
+(    runs-on: ubuntu-latest) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 197.0 Tm
+(    steps:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 185.5 Tm
+(      - uses: actions/checkout@v4) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 174.0 Tm
+(      - uses: actions/setup-java@v4) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 162.5 Tm
+(        with:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 151.0 Tm
+(          java-version: '17') Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 139.5 Tm
+(          distribution: 'temurin') Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 128.0 Tm
+(      - uses: gradle/actions/setup-gradle@v3) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 116.5 Tm
+(        with:) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 105.0 Tm
+(          gradle-version: '8.7') Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 93.5 Tm
+(      - run: gradle assembleDebug --stacktrace) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 82.0 Tm
+(      - uses: actions/upload-artifact@v4) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 70.5 Tm
+(        with:) Tj
+0.45 0.45 0.45 rg
+/F1 8.5 Tf
+1 0 0 1 48 32 Tm
+(FoodDash Lab Report & APK Compilation Guide (com.fooddash.app) - Page 3 of 5) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 5511 >>
+stream
+BT
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 738.0 Tm
+(          name: FoodDash-v1.0-APK) Tj
+0.10 0.32 0.22 rg
+/F3 8.2 Tf
+1 0 0 1 62 726.5 Tm
+(          path: app/build/outputs/apk/debug/app-debug.apk) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 708.0 Tm
+(Step 3: Download the Compiled APK from GitHub Actions) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 693.0 Tm
+(1. Open your GitHub repository in any browser \(on PC or mobile\).) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 680.0 Tm
+(2. Click the "Actions" tab at the top.) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 667.0 Tm
+(3. Click the latest green workflow run \("Build FoodDash Android APK"\).) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 654.0 Tm
+(4. Scroll down to the "Artifacts" section and click "FoodDash-v1.0-APK" to download the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 641.0 Tm
+(ZIP containing app-debug.apk.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 621.0 Tm
+(Step 4: Publish GitHub Release v1.0 \(Required Lab Deliverable\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 606.0 Tm
+(1. On your GitHub repository main page, click "Releases" -> "Create a new release" in the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 593.0 Tm
+(right sidebar.) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 580.0 Tm
+(2. Click "Choose a tag", type v1.0, and select "Create new tag: v1.0 on publish".) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 567.0 Tm
+(3. Set Release Title to "FoodDash v1.0 - Final Lab Submission".) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 554.0 Tm
+(4. Drag and drop your compiled FoodDash-v1.0.apk \(renamed from app-debug.apk\) into the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 541.0 Tm
+(binaries box.) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 528.0 Tm
+(5. Click "Publish release".) Tj
+0.91 0.35 0.05 rg
+/F2 12 Tf
+1 0 0 1 48 498.0 Tm
+(SECTION 5: Post-Installation Testing Checklist & Viva Defense Summary) Tj
+0.15 0.25 0.20 rg
+/F2 9 Tf
+1 0 0 1 48 480.0 Tm
+(Verifying All 12 Mandatory University Lab Features on Your Physical Android Device) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 466.0 Tm
+(After installing FoodDash-v1.0.apk on your Android smartphone, walk through this 6-point) Tj
+0.12 0.16 0.22 rg
+/F1 9.5 Tf
+1 0 0 1 48 452.5 Tm
+(checklist before your final lab demonstration and viva:) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 433.0 Tm
+(Check 1: Input Validation & Firebase Authentication \(Reqs #1, #3, #7, #9\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 418.0 Tm
+(Tap Sign In on LoginActivity with an empty email to demonstrate) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 405.0 Tm
+(TextInputEditText.setError\(\). Then register a new Customer account on RegisterActivity,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 392.0 Tm
+(verify "Remember Me" persistence in SharedPreferences by closing and reopening the app via) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 379.0 Tm
+(SplashActivity.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 359.0 Tm
+(Check 2: RecyclerView Menu, Categories & Search \(Reqs #2, #4, #5, #8\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 344.0 Tm
+(On CustomerHomeActivity, filter dishes by Burgers / Biryani / Pizza, search by keyword,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 331.0 Tm
+(and tap a dish to open FoodDetailsActivity via Explicit Intent with Serializable Food) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 318.0 Tm
+(extra.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 298.0 Tm
+(Check 3: Cart & Manual bKash / Nagad Payment Reference \(Section 5\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 283.0 Tm
+(Add items to CartActivity, adjust quantities, proceed to CheckoutActivity, select bKash or) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 270.0 Tm
+(Nagad, observe the displayed merchant number, enter a 6-20 character alphanumeric) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 257.0 Tm
+(Transaction ID \(e.g., BKA948271X\), and place the order. Confirm that paymentStatus is) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 244.0 Tm
+(saved as PENDING_VERIFICATION.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 224.0 Tm
+(Check 4: Hardware Accelerometer Shake-to-Refresh \(Req #11\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 209.0 Tm
+(Physically shake your Android phone on CustomerHomeActivity or MyOrdersActivity.) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 196.0 Tm
+(ShakeDetector.java computes gForce = sqrt\(gX^2 + gY^2 + gZ^2\) > 2.7g and refreshes the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 183.0 Tm
+(Firebase Realtime Database listener with a Toast confirmation.) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 163.0 Tm
+(Check 5: Camera / Gallery Intent & Implicit Intents \(Reqs #10, #12\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 148.0 Tm
+(Open ProfileActivity to capture a photo with the Camera or select from Gallery. Test the) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 135.0 Tm
+(Call Support button \(ACTION_DIAL\), Share Dish/Receipt button \(ACTION_SEND\), and Website) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 122.0 Tm
+(button \(ACTION_VIEW\).) Tj
+0.09 0.15 0.12 rg
+/F2 10 Tf
+1 0 0 1 48 102.0 Tm
+(Check 6: Admin Dashboard, Food CRUD & Payment Verification \(Reqs #6, #8\)) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 87.0 Tm
+(Log into the Restaurant Admin account to view AdminDashboardActivity \(Total Orders,) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 74.0 Tm
+(Pending, Completed, Total Foods, Sales Summary\). Open ManageFoodActivity to add a dish via) Tj
+0.45 0.45 0.45 rg
+/F1 8.5 Tf
+1 0 0 1 48 32 Tm
+(FoodDash Lab Report & APK Compilation Guide (com.fooddash.app) - Page 4 of 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 497 >>
+stream
+BT
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 738.0 Tm
+(FloatingActionButton or delete a dish via AlertDialog. Open AdminOrdersActivity to verify) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 725.0 Tm
+(the customer's bKash Transaction ID \(PENDING_VERIFICATION -> VERIFIED\) and update order) Tj
+0.18 0.22 0.28 rg
+/F1 9.2 Tf
+1 0 0 1 56 712.0 Tm
+(status to DELIVERED.) Tj
+0.45 0.45 0.45 rg
+/F1 8.5 Tf
+1 0 0 1 48 32 Tm
+(FoodDash Lab Report & APK Compilation Guide (com.fooddash.app) - Page 5 of 5) Tj
+ET
+endstream
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000142 00000 n 
+0000000212 00000 n 
+0000000287 00000 n 
+0000000355 00000 n 
+0000000501 00000 n 
+0000006585 00000 n 
+0000006731 00000 n 
+0000012106 00000 n 
+0000012254 00000 n 
+0000017590 00000 n 
+0000017738 00000 n 
+0000023301 00000 n 
+0000023449 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+23997
+%%EOF

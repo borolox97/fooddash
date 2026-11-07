@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fooddash_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCustomerGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, Food Lover!"
+                android:textColor="@color/fooddash_text_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shake_hint"
+                android:textColor="@color/fooddash_text_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnOpenCart"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/fooddash_orange_primary"
+            android:text="Cart"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCartBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Cart (0)"
+        android:textColor="@color/fooddash_orange_secondary"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etSearchFood"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Search burgers, biryani, pizza..."
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnCatAll" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginEnd="8dp" android:text="All" />
+            <Button android:id="@+id/btnCatBurgers" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginEnd="8dp" android:text="Burgers" />
+            <Button android:id="@+id/btnCatPizza" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginEnd="8dp" android:text="Pizza" />
+            <Button android:id="@+id/btnCatBiryani" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginEnd="8dp" android:text="Biryani" />
+            <Button android:id="@+id/btnCatDrinks" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Drinks" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCustomerFoods"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btnOpenMyOrders" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="Orders" />
+        <Button android:id="@+id/btnOpenProfile" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="44dp" android:layout_marginStart="6dp" android:layout_weight="1" android:text="Profile" />
+        <Button android:id="@+id/btnCallSupport" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="44dp" android:layout_marginStart="6dp" android:layout_weight="1" android:text="Call" />
+        <Button android:id="@+id/btnOpenWebsite" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="44dp" android:layout_marginStart="6dp" android:layout_weight="1" android:text="Web" />
+    </LinearLayout>
+</LinearLayout>
